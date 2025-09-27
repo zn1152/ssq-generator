@@ -1,0 +1,19 @@
+{
+  "name": "ssq-generator",
+  "version": "1.0.0",
+  "description": "A random number generator for China's Welfare Lottery Double Chromosphere (双色球).",
+  "main": "src/generate.js",
+  "scripts": {
+    "generate": "node src/generate.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "lottery",
+    "random",
+    "双色球",
+    "中国福利彩票"
+  ],
+  "author": "",
+  "license": "ISC"
+}
