@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双色球号码生成器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>双色球号码生成器</h1>
+        
+        <!-- 投注类型选择 -->
+        <div class="bet-type">
+            <button class="type-btn active" data-type="normal">普通投注</button>
+            <button class="type-btn" data-type="multiple">复式投注</button>
+            <button class="type-btn" data-type="dantuo">胆拖投注</button>
+        </div>
+
+        <!-- 参数设置区 -->
+        <div class="params-container">
+            <!-- 普通投注参数 -->
+            <div class="params-section" id="normal-params">
+                <label>
+                    注数：
+                    <input type="number" id="normal-count" min="1" value="1">
+                </label>
+            </div>
+
+            <!-- 复式投注参数 -->
+            <div class="params-section hidden" id="multiple-params">
+                <label>
+                    注数：
+                    <input type="number" id="multiple-count" min="1" value="1">
+                </label>
+                <label>
+                    红球个数：
+                    <input type="number" id="multiple-red" min="6" max="33" value="7">
+                </label>
+                <label>
+                    蓝球个数：
+                    <input type="number" id="multiple-blue" min="1" max="16" value="1">
+                </label>
+            </div>
+
+            <!-- 胆拖投注参数 -->
+            <div class="params-section hidden" id="dantuo-params">
+                <div>
+                    <label>胆码：</label>
+                    <input type="text" id="dantuo-dan" placeholder="输入胆码，如：1,2,3">
+                </div>
+                <div>
+                    <label>拖码：</label>
+                    <input type="text" id="dantuo-tuo" placeholder="输入拖码，如：4,5,6,7,8">
+                </div>
+                <div>
+                    <label>蓝球个数：</label>
+                    <input type="number" id="dantuo-blue" min="1" max="16" value="1">
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="actions">
+            <button id="generate-btn">生成号码</button>
+            <button id="reset-btn">重置</button>
+        </div>
+
+        <!-- 结果展示区 -->
+        <div class="result-container">
+            <div id="number-list"></div>
+            <div id="summary"></div>
+        </div>
+
+        <!-- 免责声明 -->
+        <div class="disclaimer">
+            免责声明：本工具仅供娱乐，购彩需理性。
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

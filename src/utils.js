@@ -61,8 +61,27 @@ function formatNumbers(arr) {
         .join(' ');
 }
 
+/**
+ * 计算组合数 C(n,m)
+ * @param {number} n - 总数
+ * @param {number} m - 选择数
+ * @returns {number} 组合数
+ */
+function combination(n, m) {
+    if (m > n) return 0;
+    if (m === 0 || m === n) return 1;
+    if (m > n / 2) m = n - m;
+    
+    let result = 1;
+    for (let i = 1; i <= m; i++) {
+        result *= (n - i + 1) / i;
+    }
+    return Math.round(result);
+}
+
 // 导出辅助函数
 module.exports = {
     getRandomNumbers,
-    formatNumbers
+    formatNumbers,
+    combination
 };
