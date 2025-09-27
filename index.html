@@ -30,10 +30,6 @@
             <!-- 复式投注参数 -->
             <div class="params-section hidden" id="multiple-params">
                 <label>
-                    注数：
-                    <input type="number" id="multiple-count" min="1" value="1">
-                </label>
-                <label>
                     红球个数：
                     <input type="number" id="multiple-red" min="6" max="33" value="7">
                 </label>
@@ -41,19 +37,25 @@
                     蓝球个数：
                     <input type="number" id="multiple-blue" min="1" max="16" value="1">
                 </label>
+                <label>
+                    注数：
+                    <input type="number" id="multiple-count" min="1" value="1">
+                </label>
             </div>
 
             <!-- 胆拖投注参数 -->
             <div class="params-section hidden" id="dantuo-params">
-                <div>
+                <div class="input-group">
                     <label>胆码：</label>
-                    <input type="text" id="dantuo-dan" placeholder="输入胆码，如：1,2,3">
+                    <input type="text" id="dantuo-dan" placeholder="输入1-5个号码，如：1,2,3">
+                    <span class="hint">（1-5个）</span>
                 </div>
-                <div>
+                <div class="input-group">
                     <label>拖码：</label>
-                    <input type="text" id="dantuo-tuo" placeholder="输入拖码，如：4,5,6,7,8">
+                    <input type="text" id="dantuo-tuo" placeholder="可选，如：4,5,6,7,8">
+                    <span class="hint">（胆码+拖码≥6个）</span>
                 </div>
-                <div>
+                <div class="input-group">
                     <label>蓝球个数：</label>
                     <input type="number" id="dantuo-blue" min="1" max="16" value="1">
                 </div>
